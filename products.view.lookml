@@ -37,4 +37,13 @@
   - measure: count
     type: count
     drill_fields: [id, item_name, inventory_items.count]
+    
+  - measure: count_of_distinct_products
+    type: count_distinct
+    sql: ${id}
+    
+  - measure: sum_retail_price
+    type: sum
+    sql: ${retail_price}
+    
 
